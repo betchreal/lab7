@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         localStorage.setItem("events", JSON.stringify(storedEvents));
 
-        fetch("http://localhost:3000/api/events", {
+        fetch("https://lab7.up.railway.app/api/events", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             isAnimating = false;
 
             try {
-                const response = await fetch("http://localhost:3000/api/events");
+                const response = await fetch("https://lab7.up.railway.app/api/events");
                 if (!response.ok) {
                     throw new Error("Failed to fetch events");
                 }
