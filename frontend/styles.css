@@ -75,11 +75,12 @@ body {
     border-left: 0.1vw solid black;
     border-right: 0.1vw solid black;
     background-color: white;
-    flex-grow: 3;
+    flex-grow: 2;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
 }
 
 .block5 {
@@ -149,6 +150,78 @@ body {
     transition: color 0.3s;
 }
 
+#play-button {
+    padding: 7px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#play-button:hover {
+    background-color: #0056b3;
+}
+
+#work-zone {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+#anim {
+    width: 90%;
+    height: 80%;
+    border: 5px solid green;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('texture.png') repeat;
+    background-size: 32px 32px;
+}
+
+/* Область controls */
+#controls {
+    width: calc(100% - 10px);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+#start-button {
+    padding: 1vmin 2vmin;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #218838;
+}
+
+#messages {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: clamp(10px, 1.5vw, 16px);
+}
+
+.hidden {
+    display: none;
+}
+
 @media (max-width: 1400px) {
     .container {
         flex-direction: column;
@@ -161,9 +234,12 @@ body {
 
     .block1, .block2, .block3, .block4, .block5 {
         border: 0.1vw solid black;
-        flex-grow: 0;
         width: 100%;
         margin-bottom: 0.2vw;
+    }
+
+    .block3 {
+        height: 100vh;
     }
 
     .block2 {
